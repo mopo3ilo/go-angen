@@ -1,0 +1,26 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "group": "build",
+      "dependsOn": ["build.elf", "build.exe"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "label": "build.elf",
+      "type": "shell",
+      "group": "build",
+      "command": "mkdir -p build && GOOS=linux GOARCH=amd64 go build -ldflags=\"-s\" -o ./build/angen . && strip ./build/angen && upx -9 -q ./build/angen"
+    },
+    {
+      "label": "build.exe",
+      "type": "shell",
+      "group": "build",
+      "command": "mkdir -p build && GOOS=windows GOARCH=amd64 go build -ldflags=\"-s\" -o ./build/angen.exe . && strip ./build/angen.exe && upx -9 -q ./build/angen.exe"
+    }
+  ]
+}
