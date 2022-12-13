@@ -120,7 +120,6 @@ breakable
 breezy
 brief
 bright
-bright
 broad
 broken
 brown
@@ -523,7 +522,6 @@ jumpy
 juvenile
 kaput
 keen
-kind
 kind
 kindly
 knotty
