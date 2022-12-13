@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	delimiters    = " _~!?@#$%^&*-+=,."
+	delimiters    = " _|,;:.!?~@#$%^&+-*=/"
 	delimitersMax = len(delimiters) - 1
 )
 
